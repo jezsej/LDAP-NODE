@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config()
+}
+
 const express = require('express')
 const ActiveDirectory = require('activedirectory');
 
@@ -11,8 +15,8 @@ router.get('/', (req, res) => {
 router.post('/', async(req, res) => {
 
     const config = {
-        url: 'ldap://192.168.100.23:389',
-        baseDN: 'dc=hfbultd,dc=co, dc=ug'
+        url: process.env.LDAP_URL,
+        baseDN: process.env.baseDN
     };
 
     const ad = new ActiveDirectory(config);
