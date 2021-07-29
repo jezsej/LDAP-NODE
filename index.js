@@ -4,8 +4,8 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const bodyParser = require('body-parser')
 
-const indexRouter = require('./Routes/index')
-const loginRouter = require('./Routes/login')
+const indexRouter = require('./routes/index')
+const loginRouter = require('./routes/login')
 
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
