@@ -50,7 +50,7 @@ router.post('/', async(req, res) => {
         console.log(`SYSTEM ERROR ${err}`)
         let errorMessage = err
 
-        res.render('/', { errorMessage })
+        res.render('index', { errorMessage })
 
     }
 
